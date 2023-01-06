@@ -1,5 +1,0 @@
-package practice
-
-func Hello() {
-
-}
