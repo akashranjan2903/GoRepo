@@ -230,7 +230,7 @@ func Checkpalindromestr(slice []string) []string {
 	return newslice
 }
 
-// reverse a string
+// HELPER FUNC , reverse a string
 func Reverserunestr(str []rune) []rune {
 
 	start := 0
@@ -247,7 +247,7 @@ func Reverserunestr(str []rune) []rune {
 	return str
 }
 
-// reverse a string with start and end points
+// HELPER FUNC ,reverse a string with start and end points
 func Reversestr(str []rune, start, end int) []rune {
 
 	for start < end {
