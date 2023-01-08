@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// unction that takes a slice of integers and returns a new slice with only the even numbers.
+// 1.function that takes a slice of integers and returns a new slice with only the even numbers.
 func Slice(slice []int) []int {
 	length := len(slice)
 	for i := 0; i < length; {
@@ -21,14 +21,14 @@ func Slice(slice []int) []int {
 	return slice
 }
 
-// function that takes a slice of strings and returns a new slice with all strings sorted in alphabetical order
+// 2.function that takes a slice of strings and returns a new slice with all strings sorted in alphabetical order
 func Sortedslice(slice1 []string) []string {
 
 	sort.Strings(slice1)
 	return slice1
 }
 
-// function that takes a string and returns a map with the frequency count of each character in the string
+// 3.function that takes a string and returns a map with the frequency count of each character in the string
 func Alphabeticalfrequency(name string) map[string]int {
 
 	newmap := map[string]int{}
@@ -46,7 +46,7 @@ func Alphabeticalfrequency(name string) map[string]int {
 	return newmap
 }
 
-// function for sum and largest number and avg
+// 4,5,9,11.function for sum and larges,second largest number and avg
 func SumAvgLargest(slice []int) (int, int, int, int) {
 
 	largest := slice[0]
@@ -67,7 +67,7 @@ func SumAvgLargest(slice []int) (int, int, int, int) {
 	return largest, secondLargestNo, sum, avg
 }
 
-// function that takes a slice of strings and returns a new slice with all strings that have more than 5 characters
+// 6.unction that takes a slice of strings and returns a new slice with all strings that have more than 5 characters
 func Slicewithmaxletter(slice []string) []string {
 	length := len(slice)
 	for i := 0; i < length; {
@@ -82,6 +82,7 @@ func Slicewithmaxletter(slice []string) []string {
 	return slice
 }
 
+// 7.function that takes a string and returns a new string with all vowels removed
 func Constantstr(name string) string {
 
 	arr := []string{}
@@ -96,6 +97,7 @@ func Constantstr(name string) string {
 	return name
 }
 
+// 8. function that takes a slice of integers and returns a new slice with all duplicates removed
 func Removeduplicate(slice []int) []int {
 
 	newMap := map[int]bool{}
@@ -112,6 +114,7 @@ func Removeduplicate(slice []int) []int {
 	return newslice
 }
 
+// 10.function that takes a slice of strings and a string, and returns true if the string is contained in the slice
 func MatchString(slice []string, str string) bool {
 
 	for _, value := range slice {
@@ -122,6 +125,8 @@ func MatchString(slice []string, str string) bool {
 	}
 	return false
 }
+
+// 12function that takes a slice of integers and returns the index of the first occurrence of a given number
 func FirstOccurenceint(slice []int, num int) int {
 
 	for i, value := range slice {
@@ -133,6 +138,7 @@ func FirstOccurenceint(slice []int, num int) int {
 	return -1
 }
 
+// 13function that takes a slice of integers and a number and returns the number of times the number appears in the slice
 func TotalOccurence(slice []int, num int) int {
 
 	counter := 0
@@ -147,6 +153,8 @@ func TotalOccurence(slice []int, num int) int {
 
 // reversing a slice
 // Another way is to do by sort function in slice
+// 14.function that takes a slice of integers and returns a new slice with the elements in reverse order
+
 func ReverseSlice(slice []int) []int {
 
 	start := 0
@@ -163,6 +171,7 @@ func ReverseSlice(slice []int) []int {
 	return slice
 }
 
+// 15.function that takes a slice of integers and returns true if the slice is sorted in ascending order
 func CheckSorted(slice []int) bool {
 
 	for i := 0; i < len(slice)-1; i++ {
@@ -174,6 +183,7 @@ func CheckSorted(slice []int) bool {
 	return true
 }
 
+// 16.function that takes a slice of strings and a string, and returns the index of the first occurrence of the string in the slice
 func FirstOccurencestr(slice []string, name string) int {
 
 	for i, value := range slice {
@@ -185,6 +195,7 @@ func FirstOccurencestr(slice []string, name string) int {
 	return -1
 }
 
+// 17.function that takes a slice of strings and returns a new slice with all strings that start with a given letter
 func TakestrFromletter(slice []string, str string) []string {
 
 	newSlice := []string{}
@@ -197,6 +208,7 @@ func TakestrFromletter(slice []string, str string) []string {
 	return newSlice
 }
 
+// 18,26.function that takes a slice of strings and returns a new slice with all strings that are palindromes
 func Checkpalindromestr(slice []string) []string {
 
 	newslice := []string{}
@@ -250,7 +262,7 @@ func Reversestr(str []rune, start, end int) []rune {
 	return str
 }
 
-// reverse words of the string
+// 19.function that takes a string and returns a new string with all the words in reverse order
 func ReversestrArray(str string) string {
 
 	runearray := []rune(str)
@@ -277,6 +289,7 @@ func ReversestrArray(str string) string {
 
 }
 
+// 20.function that takes a slice of integers and returns a new slice with all the prime numbers
 func Prime(slice []int) []int {
 
 	length := len(slice)
@@ -306,6 +319,7 @@ func Prime(slice []int) []int {
 
 // func alternate
 
+// 22. function that takes a slice of integers and returns a new slice with all elements that are divisible by a given number
 func Checkdivisibility(slice []int, num int) []int {
 
 	length := len(slice)
@@ -322,6 +336,7 @@ func Checkdivisibility(slice []int, num int) []int {
 	return slice
 }
 
+// 23. function that takes a slice of integers and returns true if the slice contains a given number
 func Checknumispreset(slice []int, num int) bool {
 
 	for _, value := range slice {
@@ -334,6 +349,7 @@ func Checknumispreset(slice []int, num int) bool {
 	return false
 }
 
+// 24.function that takes a slice of strings and returns a new slice with all strings that are at least a given length
 func Slicewithminletter(slice []string, num int) []string {
 	length := len(slice)
 	for i := 0; i < length; {
@@ -348,6 +364,7 @@ func Slicewithminletter(slice []string, num int) []string {
 	return slice
 }
 
+// 25.function that takes a slice of strings and returns a new slice with all strings that contain a given letter
 func Checkletterpresent(slice []string, letter string) []string {
 
 	length := len(slice)
@@ -372,6 +389,47 @@ func Checkletterpresent(slice []string, letter string) []string {
 	return slice
 }
 
+// 27.function that takes a string and returns a new string with all the words in reverse order, with the letters in each word reversed as well.
+func Reversewholestr(str string) string {
+	runearray := []rune(str)
+	newarray := Reverserunestr(runearray)
+	return string(newarray)
+}
+
+// 28.function that takes a slice of integers and returns the smallest number that is divisible by all elements in the slice
+func Lcm(slice []int) int {
+
+	smallest := slice[0]
+
+	for i := 0; i < len(slice)-1; i++ {
+
+		if smallest > slice[i] {
+			smallest = slice[i]
+
+		}
+
+	}
+	for {
+		flag := false
+		for i, value := range slice {
+			if smallest%value != 0 {
+				break
+			}
+			if i == len(slice)-1 {
+				flag = true
+			}
+		}
+		if !flag {
+			smallest++
+		} else {
+			break
+		}
+
+	}
+	return smallest
+}
+
+// 29 function that takes a slice of integers and returns a new slice with all elements that are palindromes
 func Numberpalindrome(slice []int) []int {
 
 	length := len(slice)
@@ -401,6 +459,7 @@ func Numberpalindrome(slice []int) []int {
 	return slice
 }
 
+// 30.function that takes a slice of integers and returns true if the slice is sorted in descending order
 func CheckdescendingSorted(slice []int) bool {
 
 	for i := 0; i < len(slice)-1; i++ {
@@ -410,36 +469,4 @@ func CheckdescendingSorted(slice []int) bool {
 		}
 	}
 	return true
-}
-func Lcm(slice []int) int {
-
-	smallest := slice[0]
-
-	for i := 0; i < len(slice)-1; i++ {
-
-		if smallest > slice[i] {
-			smallest = slice[i]
-
-		}
-
-	}
-	/* Use of For Loop as a While Loop*/
-	for {
-		flag := false
-		for i, value := range slice {
-			if smallest%value != 0 {
-				break
-			}
-			if i == len(slice)-1 {
-				flag = true
-			}
-		}
-		if !flag {
-			smallest++
-		} else {
-			break
-		}
-
-	}
-	return smallest // Return without any value
 }

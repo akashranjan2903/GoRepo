@@ -2,8 +2,6 @@ package Exercise
 
 import (
 	"sort"
-	"strings"
-	"unicode"
 )
 
 // function that takes a slice of strings and returns a map with the frequency of each string in the slice
@@ -70,22 +68,74 @@ func Reversedmap(temp map[string]int) map[int]string {
 	return newMap
 }
 
-func ToCamelCase(s string) string {
-	// your code
-	strings.Replace(s, "_", " ", -1)
-	var slice = []string{}
-	chars := []rune(s)
-	if unicode.IsUpper(chars[0]) {
-		strings.Title(s)
-		strings.Replace(s, " ", "", -1)
+// func ToCamelCase(s string) string {
+// 	var slice = []string{}
+// 	if strings.Contains(s, "_") {
+// 		slice = strings.Split(s, "_")
+// 	}
+// 	if strings.Contains(s, "-") {
+// 		slice = strings.Split(s, "-")
+// 	}
 
-		return s
-	} else {
-		slice = strings.Split(s, " ")
-		for _, value := range slice {
-			strings.Title(value)
-		}
-		str := strings.Join(slice, "")
-		return str
-	}
-}
+// 	chars := []rune(slice[0])
+// 	var str string
+// 	println(slice[0])
+
+// 	println(unicode.IsUpper(chars[0]))
+// 	if unicode.IsUpper(chars[0]) {
+// 		for _, value := range slice {
+// 			strings.Title(value)
+// 		}
+// 		str = strings.Join(slice, "")
+// 		return str
+// 	} else {
+// 		for i := 1; i < len(slice); i++ {
+// 			value := strings.Title(slice[i])
+// 			slice[i] = value
+
+// 		}
+// 		str = strings.Join(slice, "")
+// 		return str
+
+// 	}
+// }
+
+// func SpinWords(str string) string {
+
+// 	slice := strings.Split(str, " ")
+// 	for i, value := range slice {
+// 		if len(slice[i]) >= 5 {
+
+// 			chars := []rune(value)
+// 			start := 0
+// 			end := len(chars) - 1
+// 			for start < end {
+
+// 				chars[start], chars[end] = chars[end], chars[start]
+
+// 				start++
+// 				end--
+// 			}
+// 			slice[i] = string(chars)
+// 		}
+// 		str = strings.Join(slice, " ")
+// 	}
+// 	return str
+
+// }
+
+// func Accum(s string) string {
+
+// 	chars := []rune(s)
+// 	var slice = []string{}
+// 	for key, value := range chars {
+// 		temp := string(value)
+// 		word := strings.Repeat(temp, key)
+// 		upperCaseletter := strings.ToUpper(string(value))
+// 		word = upperCaseletter + word
+// 		slice = append(slice, word)
+// 	}
+// 	s = strings.Join(slice, "-")
+// 	return s
+
+// }

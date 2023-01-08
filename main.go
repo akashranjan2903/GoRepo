@@ -3,111 +3,102 @@ package main
 import (
 	"fmt"
 
-	exercise1 "github.com/GoPractice/Exercise"
+	"github.com/GoPractice/Exercise"
 )
 
 func main() {
 
-	// Chance game func
-
-	// Games.Systemnum()
-	// Games.Guess()
-	// Games.Play()
-	// Games.Name()
-
 	var arr = []string{"a", "b", "c", "a", "b"}
-	var mapValue = exercise1.Frequency(arr)
-	fmt.Println(mapValue)
+	var mapValue = Exercise.Frequency(arr)
+	fmt.Println("Frequency of values:", mapValue)
 	var map1 = map[string]int{
 		"a": 1, "c": 2, "b": 3,
 	}
-	var newslice = exercise1.Sortedslicemap(map1)
-	fmt.Printf("slice:%v\n", newslice)
+	var newslice = Exercise.Sortedslicemap(map1)
+	fmt.Printf("Sorted slice:%v\n", newslice)
 	var map2 = map[string]int{
 		"a": 1, "b": 2, "c": 3,
 	}
-	fmt.Printf("New Map:%v\n", exercise1.Newmap(map2))
-	newSlice := exercise1.Mapslice(map2, []string{"a", "b", "d"})
-	fmt.Printf("New Slice:%v\n", newSlice)
-	fmt.Printf("New Reversed Map:%v\n", exercise1.Reversedmap(map2))
+	fmt.Printf("Values multiplied by 2 in map is:%v\n", Exercise.Newmap(map2))
+	newSlice := Exercise.Mapslice(map2, []string{"a", "b", "d"})
+	fmt.Printf("New Slice with keys in map are:%v\n", newSlice)
+	fmt.Printf("New Reversed Map:%v\n", Exercise.Reversedmap(map2))
 
-	// New Ques
+	//Exercise1
 
-	slice := exercise1.Slice([]int{1, 2, 4, 4, 8, 3, 3, 3})
+	slice := Exercise.Slice([]int{1, 2, 4, 4, 8, 3, 3, 3})
 	fmt.Printf("New Slice with even number :%v\n", slice)
 
-	slice1 := exercise1.Sortedslice([]string{"zebra", "monkey", "aardvark"})
+	slice1 := Exercise.Sortedslice([]string{"zebra", "monkey", "aardvark"})
 	fmt.Printf("New sorted Slice:%v\n", slice1)
 
-	newMap := exercise1.Alphabeticalfrequency("Hello")
+	newMap := Exercise.Alphabeticalfrequency("Hello")
 	fmt.Printf("Frequency count of each character is %v\n", newMap)
 
-	largestNo, secondLargestNo, sum, avg := exercise1.SumAvgLargest([]int{1, 2, 3, 4, 5})
+	largestNo, secondLargestNo, sum, avg := Exercise.SumAvgLargest([]int{1, 2, 3, 4, 5})
 	fmt.Printf("Largest No is :%d and second largest number is : %d and sum is: %d and avg is: %d\n", largestNo, secondLargestNo, sum, avg)
 
-	slice2 := exercise1.Slicewithmaxletter([]string{"cat", "dog", "elephant", "lion"})
+	slice2 := Exercise.Slicewithmaxletter([]string{"cat", "dog", "elephant", "lion"})
 	fmt.Printf("Slice with more than 5 character %v\n", slice2)
 
-	str := exercise1.Constantstr("hello")
+	str := Exercise.Constantstr("hello")
 	fmt.Printf("String with No Vowels:%s\n", str)
 
-	slice3 := exercise1.Removeduplicate([]int{1, 2, 3, 2, 4, 5, 5})
+	slice3 := Exercise.Removeduplicate([]int{1, 2, 3, 2, 4, 5, 5})
 	fmt.Printf("Slice with no duplicates :%v\n", slice3)
 
-	check := exercise1.MatchString([]string{"cat", "dog", "elephant"}, "dog")
+	check := Exercise.MatchString([]string{"cat", "dog", "elephant"}, "dog")
 	fmt.Printf("String present in slice or nots: %t\n", check)
 
-	occurence := exercise1.FirstOccurenceint([]int{1, 2, 3, 2, 4, 5}, 2)
+	occurence := Exercise.FirstOccurenceint([]int{1, 2, 3, 2, 4, 5}, 2)
 	fmt.Printf("First Occurence of the given number at Index is:%d\n", occurence)
 
-	totaloccurence := exercise1.TotalOccurence([]int{1, 2, 3, 2, 4, 5}, 2)
+	totaloccurence := Exercise.TotalOccurence([]int{1, 2, 3, 2, 4, 5}, 2)
 	fmt.Printf("Total Occurence of the given number at Index is:%d\n", totaloccurence)
 
-	newSlice4 := exercise1.ReverseSlice([]int{1, 2, 3, 4, 5})
+	newSlice4 := Exercise.ReverseSlice([]int{1, 2, 3, 4, 5})
 	fmt.Printf("Reversed slice is :%v\n", newSlice4)
 
-	check1 := exercise1.CheckSorted([]int{1, 2, 3, 4, 5})
+	check1 := Exercise.CheckSorted([]int{1, 2, 3, 4, 5})
 	fmt.Printf("Check the slice is sorted or not:%v\n", check1)
 
-	stroccurence := exercise1.FirstOccurencestr([]string{"cat", "dog", "elephant"}, "dog")
+	stroccurence := Exercise.FirstOccurencestr([]string{"cat", "dog", "elephant"}, "dog")
 	fmt.Printf("First Occurence of the given string at Index is:%d\n", stroccurence)
 
-	slice4 := exercise1.TakestrFromletter([]string{"cat", "dog", "elephant"}, "e")
+	slice4 := Exercise.TakestrFromletter([]string{"cat", "dog", "elephant"}, "e")
 	fmt.Printf("All words start from the given letter is :%v\n", slice4)
 
-	slice5 := exercise1.Checkpalindromestr([]string{"racecar", "level", "hello"})
+	slice5 := Exercise.Checkpalindromestr([]string{"racecar", "level", "hello"})
 	fmt.Printf("New Checked Palindrome Slice for string  is : %v\n", slice5)
 
-	str2 := exercise1.ReversestrArray("This is a test")
+	str2 := Exercise.ReversestrArray("This is a test")
 	fmt.Printf("New Reversed words of String is: %s\n", str2)
 
-	slice6 := exercise1.Prime([]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10})
+	slice6 := Exercise.Prime([]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10})
 	fmt.Printf("New slice with prime number is: %v\n", slice6)
 
-	slice7 := exercise1.Checkdivisibility([]int{1, 2, 3, 4, 5}, 2)
+	slice7 := Exercise.Checkdivisibility([]int{1, 2, 3, 4, 5}, 2)
 	fmt.Printf("New Slice which is divisible by given number is: %v\n", slice7)
 
-	slice8 := exercise1.Checknumispreset([]int{1, 2, 3, 4, 5}, 3)
+	slice8 := Exercise.Checknumispreset([]int{1, 2, 3, 4, 5}, 3)
 	fmt.Printf("New Slice which is divisible by given number is: %v\n", slice8)
 
-	slice9 := exercise1.Slicewithminletter([]string{"cat", "dog", "elephant", "lion"}, 4)
+	slice9 := Exercise.Slicewithminletter([]string{"cat", "dog", "elephant", "lion"}, 4)
 	fmt.Printf(" Array with min letter present is:%v\n", slice9)
 
-	str3 := "This is a test"
-	newrune := []rune(str3)
-	str3 = string(exercise1.Reverserunestr(newrune))
+	str3 := string(Exercise.Reversewholestr("This is a test"))
 	fmt.Printf("Reverse String is : %s\n", str3)
 
-	slice10 := exercise1.Checkletterpresent([]string{"cat", "dog", "elephant"}, "e")
+	slice10 := Exercise.Checkletterpresent([]string{"cat", "dog", "elephant"}, "e")
 	fmt.Printf("Slice with given letter is present: %v\n", slice10)
 
-	check2 := exercise1.Lcm([]int{2, 3, 5})
+	check2 := Exercise.Lcm([]int{2, 3, 5})
 	fmt.Printf("Lcm is :%v\n", check2)
 
-	slice11 := exercise1.Numberpalindrome([]int{1, 11, 121, 12321})
+	slice11 := Exercise.Numberpalindrome([]int{1, 11, 121, 12321})
 	fmt.Printf("Slice with all Palindrome is: %v\n", slice11)
 
-	check3 := exercise1.CheckdescendingSorted([]int{5, 4, 3, 2, 1})
+	check3 := Exercise.CheckdescendingSorted([]int{5, 4, 3, 2, 1})
 	fmt.Printf("Check the slice is sorted or not:%v\n", check3)
 
 }
